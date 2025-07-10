@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="Logo.png" alt="Tender Management System Logo" width="150"> </p>
+  <img src="Logo.png" alt="Tender Management System Logo" width="500"> </p>
 
 <h1 align="center">Tender Management System 📈</h1>
 
