@@ -18,9 +18,13 @@ This **Tender Management System** is a sophisticated database project developed 
 ## ✨ Key Features & Functionality
 
 **End-to-End Tender Management:** Facilitates the complete lifecycle of tenders, bids, contracts, and payments, ensuring a seamless workflow.
+
 **Automated Vendor Risk Management:** Implements intelligent triggers to automatically `red-flag` and `block` vendors with a history of abandoned contracts, enhancing procurement security. This also automatically deletes their ongoing bids.
+
 **Dynamic Bid Evaluation:** Features a trigger that automatically evaluates newly submitted bids, determining initial approval status based on vendor standing and assigning an Audit Committee member for oversight.
+
 **Robust Data Model:** Engineered with a well-normalized relational schema (primarily BCNF and 3NF) to guarantee data consistency and optimize query performance.
+
 **In-depth Reporting & Analytics:** Provides a suite of powerful SQL queries for generating critical insights, including tender summaries, payment statuses, vendor performance, and budget savings.
 
 ## 📊 Database Design & Structure
@@ -32,9 +36,13 @@ The system's foundation is built upon a carefully designed Entity-Relationship (
 Below are some of the core tables in our database, demonstrating primary and foreign key relationships for data integrity:
 
 **Tender:** `TenderID` (PK), `T_Name`, `Description`, `Status`, `Budget`, `Deadline`.
+
 **Vendor:** `VendorID` (PK), `V_Name`, `Contact`, `CompletedContracts`, `IsRedFlagged`.
+
 **Bids:** `BidID` (PK), `BidAmount`, `TenderID` (FK), `VendorID` (FK), `EvalID` (FK).
+
 **Contract:** `ContractID` (PK), `TenderID` (FK), `VendorID` (FK), `ContractStatus`, `Amount`.
+
 **Payments:** `{ContractID, PaymentID}` (Composite PK), `AmountPaid`, `PaymentDate`.
 
 *(For a complete list of tables and their attributes, please refer to the `G5_T12_DBMSProject.pdf`.)* 
